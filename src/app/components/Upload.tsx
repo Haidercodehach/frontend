@@ -102,6 +102,9 @@ const Upload: React.FC = () => {
   };
   return (
     <div className="container mx-auto px-4 py-8">
+      <h1 className=" text-gray-900 text-6xl">
+        Click on select file to upload WP-2 form{" "}
+      </h1>
       <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
         <label className="flex items-center cursor-pointer">
           <input
@@ -109,6 +112,7 @@ const Upload: React.FC = () => {
             accept="application/pdf"
             onChange={handleFileChange}
             className="hidden"
+            placeholder="Ask any Question Wp-2 form"
           />
           <span className="text-blue-500 hover:underline">Select File</span>
         </label>
@@ -137,7 +141,7 @@ const Upload: React.FC = () => {
             isLoadingText ? "cursor-wait" : ""
           }`}
         >
-          {isLoadingText ? "Sending..." : "Send to Django"}
+          {isLoadingText ? "Sending..." : "Send"}
         </button>
       </form>
       <p>{ret}</p>
